@@ -1,4 +1,6 @@
 import turtle 
+import argparse
+
 
 screen = turtle.Screen()
 t = turtle.Turtle()
@@ -21,5 +23,10 @@ def koch_side(n):
             koch_side(n - 1)
             t.left(angle)
 
-koch_side(2)
+# koch_side(2)
+
+for _ in range(3):
+    koch_side(3)
+    t.right(120)
 screen.mainloop()
+
