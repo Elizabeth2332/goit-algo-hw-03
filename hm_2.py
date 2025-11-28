@@ -1,18 +1,8 @@
 import turtle 
-import argparse
 
 
 screen = turtle.Screen()
 t = turtle.Turtle()
-
-
-# t.forward(20)
-# t.left(60)
-# t.forward(20)
-# t.left(-120)
-# t.forward(20)
-# t.left(60)
-# t.forward(20)
 
 
 def koch_side(n):
@@ -23,9 +13,13 @@ def koch_side(n):
             koch_side(n - 1)
             t.left(angle)
 
+# ask user for recursion level
+level = int(input("Enter recursion level (e.g. 0–4): "))
+
 # koch_side(2)
 for _ in range(3):
-    koch_side(3)
+    koch_side(level)
     t.right(120)
+
 screen.mainloop()
 
